@@ -1,0 +1,17 @@
+<div>
+  <label for = "txtID" class="form-control">EmployeeID</label>
+  <input type="text" class="form-control" id="txtID" [(ngModel)]="Id"/>
+  <label for = "txtName" class="form-control">EmployeeName</label>
+  <input type="text" class="form-control" id="txtName" [(ngModel)]="Name"/>
+  <label for = "txtAge" class="form-control">EmployeeAge</label>
+  <input type="text" class="form-control" id="txtAge" [(ngModel)]="Age"/>
+  <label for = "txtSalary0" class="form-control">Salary</label>
+  <input type="text" class="form-control" id="txtSalary0" [(ngModel)]="Salarys[0].Salary"/>
+  <label for = "txtSalary1" class="form-control">Wages</label>
+  <input type="text" class="form-control" id="txtSalary1" [(ngModel)]="Salarys[1].Salary"/>
+  <label for = "txtSalary2" class="form-control">Insurance</label>
+  <input type="text" class="form-control" id="txtSalary2" [(ngModel)]="Salarys[2].Salary"/>
+  
+  <button  class="btn btn-success" (click)="addEmployee()">Add Employee</button>
+</div>
+

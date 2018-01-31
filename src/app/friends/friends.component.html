@@ -1,0 +1,10 @@
+<div>
+  <div *ngFor="let friend of friends">
+<p>{{friend.Name}}
+  <br/>
+<button class="btn btn-primary"
+(click)="showFriend(friend)">Show Details</button>
+</p>
+</div>
+<router-outlet></router-outlet>
+</div>

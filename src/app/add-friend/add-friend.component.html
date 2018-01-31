@@ -1,0 +1,43 @@
+<div id="divNewFriend">
+  <form [formGroup]="myFriendForm" (ngSubmit)="addFriend(myFriendForm.value)">
+    <label class="form-control" for="friendName">FriendName</label>
+    <input  type="text"  [appFullname]="color" class="form-control" formControlName="friendName"id="friendName"/>
+    <span class="alert alert-danger" *ngIf="!friendName.valid && friendName.touched">
+    <span *ngIf="friendName.hasError('required')">
+      Name is required
+    </span>
+    <span *ngIf="friendName.hasError('minlength')">
+      Name not valid
+    </span>
+    <span *ngIf="friendName.hasError('noSpace')">
+      space not allowed!!!!
+    </span>
+    </span><br/>
+    <label class="form-control" for="friendPhone">FriendPhone</label>
+    <input  type="text" class="form-control" formControlName="friendPhone"id="friendPhone"/>
+    <span class="alert alert-danger" *ngIf="!friendPhone.valid && friendPhone.touched">
+        <span *ngIf="friendPhone.hasError('required')">PhoneNo. is required
+</span>
+<span *ngIf="friendPhone.hasError('minlength')">PhoneNo. not valid
+  </span>
+    </span><br/>
+    <label class="form-control" for="friendAge">FriendAge</label>
+    <input type="text" class="form-control" formControlName="friendAge"id="friendAge"/>
+    <span class="alert alert-danger" *ngIf="!friendAge.valid && friendAge.touched">
+        <span *ngIf="friendAge.hasError('required')">R U Ageless??
+</span>
+<!--<span *ngIf="friendAge.hasError('minlength')">Age is not valid
+  </span>-->
+    </span><br/>
+    <label class="form-control" for="friendFB">FriendFB</label>
+    
+    <input type="text" class="form-control" formControlName="friendFB"id="friendFb"/><br/>
+    <label class="form-control" for="friendAddress">FriendAddress</label>
+    <input type="text" class="form-control" formControlName="friendAddress"id="friendAddress"/>
+    <br/>
+<button class="btn btn-success">AddFriend</button>    
+   
+<button class="btn btn-danger">Reset</button>    
+    
+  </form>
+</div>

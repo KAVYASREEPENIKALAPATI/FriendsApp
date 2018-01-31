@@ -1,0 +1,16 @@
+<div>
+  <label for = "txtID" class="form-control">ID</label>
+  <input type="text" class="form-control" id="txtID" [(ngModel)]="Id"/>
+  <label for = "txtName" class="form-control">Name</label>
+  <input type="text" class="form-control" id="txtName" [(ngModel)]="Name"/>
+  <label for = "txtAge" class="form-control">Age</label>
+  <input type="text" class="form-control" id="txtAge" [(ngModel)]="Age"/>
+  <label for = "txtScore0" class="form-control">MathsScore</label>
+  <input type="text" class="form-control" id="txtScore0" [(ngModel)]="Scores[0].Score"/>
+  <label for = "txtScore1" class="form-control">SocialScore</label>
+  <input type="text" class="form-control" id="txtScore1" [(ngModel)]="Scores[1].Score"/>
+  <label for = "txtScore2" class="form-control">ScienceScore</label>
+  <input type="text" class="form-control" id="txtScore2" [(ngModel)]="Scores[2].Score"/>
+  
+  <button  class="btn btn-success" (click)="addStudent()">Add Student</button>
+</div>

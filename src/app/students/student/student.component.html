@@ -1,0 +1,13 @@
+<div>
+    Student Id: {{student.Id}}
+    <br/>
+    Student Name:{{student.Name}}
+    <br/>
+    Student Age:{{student.Age}}
+    <br/>
+    <div *ngFor="let score of student.Scores">
+        {{score.Subject}}|{{score.Score}}
+    </div>
+   Total Score:{{(student.Scores[0].Score*1)+(student.Scores[1].Score*1)+
+    (student.Scores[2].Score*1)}}
+   </div>

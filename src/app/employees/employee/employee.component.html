@@ -1,0 +1,13 @@
+<div>
+    Employee Id: {{employee.Id}}
+    <br/>
+    Employee Name:{{employee.Name}}
+    <br/>
+    Employee Age:{{employee.Age}}
+    <br/>
+    <div *ngFor="let salary of employee.Salarys">
+        {{salary.Subject}}|{{salary.Salary}}
+    </div>
+   Total Salary:{{(employee.Salarys[0].Salary*1)+(employee.Salarys[1].Salary*1)+
+    (employee.Salarys[2].Salary*1)}}
+   </div>
